@@ -64,7 +64,7 @@ function updateSightings() {
             if (result.rows.length > 0) {
                 for (var i=0; i<result.rows.length; i++) {
                     var row = result.rows.item(i);
-                    $('#sightings').append('<li class="arrow"><a href="http://maps.google.com/maps?q=' + row.latitude + ',' + row.longitude + '">' + row.animal + ' (' + row.color + ')<div class="datetime">' + row.datetime + '</div></a></li>');
+                    $('#sightings').append('<li class="arrow"><a href="http://maps.google.com/maps?q=' + encodeURI(row.animal) + '%40' + row.latitude + ',' + row.longitude + '">' + row.animal + ' (' + row.color + ')<div class="datetime">' + row.datetime + '</div></a></li>');
                 }
             } else {
                 $('#sightings').append('<li>No sightings yet.</li>');
