@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <title>Animals</title>
+        <link rel="stylesheet" type="text/css" href="jqtouch/jqtouch.css">
+        <link rel="stylesheet" type="text/css" href="themes/apple/theme.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <script src="jqtouch/jquery.js"></script>
+        <script src="jqtouch/jqtouch.js"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body>
+        <div id="jqt">
+            <div id="home" __class="current">
+                <div class="toolbar">
+                    <h1>Animals</h1>
+                    <a href="#add" class="button add" id="button-add">+</a>
+                </div>
+                
+                <ul id="sightings">
+                </ul>
+            </div>
+            
+            <div id="add" __class="current">
+                <div class="toolbar">
+                    <h1>Add Sighting</h1>
+                    <a href="#" class="back">Back</a>
+                </div>
+                <h2>What did you see?</h2>
+                <ul>
+                    <li>
+                        <input type="text" id="animal" autocorrect="off" autocapitalize="on" placeholder="Animal">
+                    </li>
+                    <li>
+                        <input type="text" id="color" autocorrect="off" autocapitalize="off" placeholder="Color">
+                    </li>
+                </ul>
+                <h2>Location</h2>
+                <ul>
+                    <li>
+                        <input type="text" id="latitude" placeholder="Latitude" readonly>
+                    </li>
+                    <li>
+                        <input type="text" id="longitude" placeholder="Longitude" readonly>
+                    </li>
+                </ul>
+                <div class="buttons">
+                    <a href="#" class="greenButton" id="add-submit">Add to database</a>
+                </div>
+            </div>
+            
+            <div id="map">
+                <div class="toolbar">
+                    <h1>Map</h1>
+                    <a href="#" class="back">Back</a>
+                </div>
+                <img src="#" id="map-image">
+            </div>
+        </div>
+    </body>
+    
+</html>
