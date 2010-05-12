@@ -44,6 +44,7 @@ $(document).ready(function() {
                 , [$('#animal').val(), $('#color').val(), $('#latitude').val(), $('#longitude').val()], function(transaction, result) {
                     updateSightings();
                     jQT.goBack();
+                    $('#animal,#color,#latitude,#longitude').val('');
                 }, function(transaction, error) {
                     alert('Oops. Error was "' + error.message + '" (Code: ' + error.code + ')');
                     return true;
